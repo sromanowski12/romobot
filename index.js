@@ -40,7 +40,10 @@ client.on('message', message => {
 			message.reply('Good work!');
 			message.react('💸');
 	}
-
+	if(message.isMentioned("@sromanowski")){
+		message.reply('Good work!');
+		message.react('💸');
+}
 	if(responseObject[message.content]){
 		message.channel.send(responseObject[message.content]);
 	}
